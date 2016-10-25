@@ -1,2 +1,2 @@
-E:\Pradeep\Development\BeerOnTap\BeerOnTap\BeerOnTap.Windows\BeerOnTap.Windows.csproj;neutral
-E:\Pradeep\Development\BeerOnTap\BeerOnTap\BeerOnTap\BeerOnTap.csproj;neutral
+E:\Pradeep\Development\BeerOnTap\Beer-On-Tap\BeerOnTap\BeerOnTap.Windows\BeerOnTap.Windows.csproj;neutral
+E:\Pradeep\Development\BeerOnTap\Beer-On-Tap\BeerOnTap\BeerOnTap\BeerOnTap.csproj;neutral
