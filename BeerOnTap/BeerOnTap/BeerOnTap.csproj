@@ -38,10 +38,79 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BreweryDbClient.cs" />
+    <Compile Include="Helpers\ConcreteConverter.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Helpers\JsonDownloader.cs" />
+    <Compile Include="Helpers\NameValueCollection.cs" />
+    <Compile Include="Interfaces\IAdjunct.cs" />
+    <Compile Include="Interfaces\IAvailability.cs" />
+    <Compile Include="Interfaces\IBeer.cs" />
+    <Compile Include="Interfaces\IBrewery.cs" />
+    <Compile Include="Interfaces\ICategory.cs" />
+    <Compile Include="Interfaces\ICharacteristic.cs" />
+    <Compile Include="Interfaces\ICountry.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
+    <Compile Include="Interfaces\IFeature.cs" />
+    <Compile Include="Interfaces\IFermentable.cs" />
+    <Compile Include="Interfaces\IFluidSize.cs" />
+    <Compile Include="Interfaces\IGlass.cs" />
+    <Compile Include="Interfaces\IGuild.cs" />
+    <Compile Include="Interfaces\IImages.cs" />
+    <Compile Include="Interfaces\ILabels.cs" />
+    <Compile Include="Interfaces\ILocation.cs" />
+    <Compile Include="Interfaces\ISocialAccount.cs" />
+    <Compile Include="Interfaces\ISocialMedia.cs" />
+    <Compile Include="Interfaces\ISocialSite.cs" />
+    <Compile Include="Interfaces\ISrm.cs" />
+    <Compile Include="Interfaces\IStyle.cs" />
+    <Compile Include="Interfaces\IYeast.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Adjunct.cs" />
+    <Compile Include="Models\Available.cs" />
+    <Compile Include="Models\Beer.cs" />
+    <Compile Include="Models\Brewery.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Change.cs" />
+    <Compile Include="Models\Characteristic.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Feature.cs" />
+    <Compile Include="Models\Fermentable.cs" />
+    <Compile Include="Models\FluidSize.cs" />
+    <Compile Include="Models\Glass.cs" />
+    <Compile Include="Models\Guild.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Labels.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\RequestParameters\BeerRequestParameters.cs" />
+    <Compile Include="Models\RequestParameters\BreweryRequestParameters.cs" />
+    <Compile Include="Models\RequestParameters\EventRequestParameters.cs" />
+    <Compile Include="Models\ResponseContainer.cs" />
+    <Compile Include="Models\SocialAccount.cs" />
+    <Compile Include="Models\SocialMedia.cs" />
+    <Compile Include="Models\SocialSite.cs" />
+    <Compile Include="Models\Srm.cs" />
+    <Compile Include="Models\Style.cs" />
+    <Compile Include="Models\SubAttribute.cs" />
+    <Compile Include="Models\Yeast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AdjuectResource.cs" />
+    <Compile Include="Resources\BeerResource.cs" />
+    <Compile Include="Resources\BreweryResource.cs" />
+    <Compile Include="Resources\CategoryResource.cs" />
+    <Compile Include="Resources\ChangeResource.cs" />
+    <Compile Include="Resources\EventResource.cs" />
+    <Compile Include="Resources\FeatureResource.cs" />
+    <Compile Include="Resources\FermentableRescource.cs" />
+    <Compile Include="Resources\FluidSizeResource.cs" />
+    <Compile Include="Resources\GuildResource.cs" />
+    <Compile Include="Resources\SocialSiteResource.cs" />
+    <Compile Include="Resources\YeastResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -58,6 +127,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\WindowsPhoneApp\v8.1\System.Net.Http.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -70,6 +146,9 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
