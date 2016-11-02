@@ -13,15 +13,21 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace BeerOnTap.UWP
+namespace BeerOnTapUniversal
 {
     public sealed partial class MainPage
     {
         public MainPage()
         {
             this.InitializeComponent();
+            try
+            {
+                LoadApplication(new BeerOnTap.App());
+            }
+            catch (Exception e)
+            {
 
-            LoadApplication(new BeerOnTap.App());
+            }
         }
     }
 }
