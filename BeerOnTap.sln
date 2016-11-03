@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerOnTap.iOS", "BeerOnTap\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerOnTap.WinPhone", "BeerOnTap\BeerOnTap.WinPhone\BeerOnTap.WinPhone.csproj", "{20B18ECB-29AF-4BE9-8CB9-8001550333FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerOnTap.UWP", "BeerOnTap\BeerOnTap.UWP\BeerOnTap.UWP.csproj", "{F5DF1D2A-05E2-4753-A01F-01AEA10C933F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerOnTapUniversal", "BeerOnTap\BeerOnTap.UWP\BeerOnTapUniversal.csproj", "{F5DF1D2A-05E2-4753-A01F-01AEA10C933F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerOnTap.Windows", "BeerOnTap\BeerOnTap.Windows\BeerOnTap.Windows.csproj", "{2AC9FA0F-9E0F-42E1-A03A-94D450AD6211}"
 EndProject
