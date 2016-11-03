@@ -14,7 +14,9 @@ namespace BeerOnTap
         {
             InitializeComponent();
 
-            MainPage = new BeerOnTap.MainPage();
+            //MainPage = new BeerOnTap.MainPage();
+            //MainPage = new BeerOnTap.MenuPage();(BeerOnTap.MenuPage());
+            MainPage = new NavigationPage(new BeerOnTap.MenuPage());
         }
 
         protected override void OnStart()
@@ -32,5 +34,6 @@ namespace BeerOnTap
         }
     }
 }
+
 
 

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
 namespace BeerOnTap
 {
-    public partial class MainPage : ContentPage
+    public partial class MenuPage : MasterDetailPage
     {
-        public MainPage()
+        public MenuPage()
         {
-            //NavigationPage.SetHasNavigationBar(this, true);
             InitializeComponent();
         }
     }
