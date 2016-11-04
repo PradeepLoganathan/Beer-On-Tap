@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeerOnTap.BeerSearchPage">
+
+  <StackLayout>
+
+    <SearchBar x:Name="searchbeer"
+               Placeholder="Search"
+               Text="Search Beers"
+               SearchCommand="{Binding SearchCommand}"/>
+
+  </StackLayout>
+
+  <ListView itemsource="{Binding Beers}" HasUnevenRows="True">
+    <Listview.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <Label Text="{Binding Name}"/>
+        </ViewCell>
+      </DataTemplate>
+    </Listview.ItemTemplate>
+  </ListView>
+</ContentPage>

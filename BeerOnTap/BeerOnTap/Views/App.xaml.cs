@@ -13,9 +13,7 @@ namespace BeerOnTap
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new BeerOnTap.MainPage();
-            //MainPage = new BeerOnTap.MenuPage();(BeerOnTap.MenuPage());
+            
             MainPage = new BeerOnTap.MainPage();
         }
 

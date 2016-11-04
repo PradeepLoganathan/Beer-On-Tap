@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BeerOnTap.Views;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace BeerOnTap
@@ -15,7 +16,7 @@ namespace BeerOnTap
 			masterPageItems.Add (new MasterPageItem {
 				Title = "Home",
 				IconSource = "contacts.png",
-				TargetType = typeof(ContactsPage)
+				TargetType = typeof(FeaturePage)
 			});
 			masterPageItems.Add (new MasterPageItem {
 				Title = "Search",

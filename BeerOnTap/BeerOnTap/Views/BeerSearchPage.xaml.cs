@@ -13,48 +13,14 @@ namespace BeerOnTap
 {
     public partial class BeerSearchPage : ContentPage
     {
-        Label resultsLabel;
         List<Beer> Beers;
 
         public BeerSearchPage()
         {
-            Label header = new Label
-            {
-                Text = "SearchBar",
-                FontSize = 50,
-                FontAttributes = FontAttributes.Bold,
-                HorizontalOptions = LayoutOptions.Center
-            };
-
-            SearchBar searchBar = new SearchBar
-            {
-                Placeholder = "Xamarin.Forms Property",
-            };
-
-            searchBar.SearchButtonPressed += OnSearchBarButtonPressed;
-
-            ListView BeerList = new ListView();
-
-            BeerList.ItemsSource = Beers;
-
-
-
-
-
-                // Build the page.
-            this.Content = new StackLayout
-            {
-                Children =
-                {
-                    header,
-                    searchBar,
-                    BeerList
-                    
-                }
-            };
+            
         }
 
-        async void OnSearchBarButtonPressed(object sender, EventArgs args)
+        async void SearchCommandExecute()
         {
             //JsonSerializer _serializer = JsonSerializer.CreateDefault();
             //SmartWeb.RestClient rcclient = new SmartWeb.RestClient(new Uri("http://api.brewerydb.com/v2/"), _serializer);
@@ -73,6 +39,10 @@ namespace BeerOnTap
             BreweryDbClient client = new BreweryDbClient("a956af587b434c4c89ef18c7bbd2fac9");
             var response = await client.Beers.Search("duvel");
             Beers = response.Data;
+            
+            
+
+            //create a list view and bind beers to the list view
 
 
         }

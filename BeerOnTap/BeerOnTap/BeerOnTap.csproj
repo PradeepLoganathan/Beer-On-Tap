@@ -35,15 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BeerSearchPage.xaml.cs">
+    <Compile Include="Views\BeerSearchPage.xaml.cs">
       <DependentUpon>BeerSearchPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="BreweryDbClient.cs" />
-    <Compile Include="MasterPageItem.cs" />
-    <Compile Include="ContactsPage.xaml.cs">
+    <Compile Include="Views\MasterPageItem.cs" />
+    <Compile Include="Views\ContactsPage.xaml.cs">
       <DependentUpon>ContactsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ConcreteConverter.cs" />
@@ -72,10 +72,10 @@
     <Compile Include="Interfaces\ISrm.cs" />
     <Compile Include="Interfaces\IStyle.cs" />
     <Compile Include="Interfaces\IYeast.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage.xaml.cs">
+    <Compile Include="Views\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Adjunct.cs" />
@@ -121,9 +121,12 @@
     <Compile Include="Resources\GuildResource.cs" />
     <Compile Include="Resources\SocialSiteResource.cs" />
     <Compile Include="Resources\YeastResource.cs" />
+    <Compile Include="Views\FeaturePage.xaml.cs">
+      <DependentUpon>FeaturePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App.xaml">
+    <EmbeddedResource Include="Views\App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -150,24 +153,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ContactsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MasterPage.xaml">
+    <EmbeddedResource Include="Views\FeaturePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BeerSearchPage.xaml">
+    <EmbeddedResource Include="Views\ContactsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BeerSearchPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
