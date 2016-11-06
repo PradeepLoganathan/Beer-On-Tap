@@ -1,4 +1,5 @@
-﻿using BeerOnTap.Models;
+﻿using BeerOnTap.Helpers;
+using BeerOnTap.Models;
 using Newtonsoft.Json;
 
 using System;
@@ -17,7 +18,39 @@ namespace BeerOnTap
 
         public BeerSearchPage()
         {
+            this.Title = "Search for beers";
+            InitializeComponent();
             
+        }
+
+        protected async override void OnAppearing()
+        {
+
+            try
+            {
+                NameValueCollection parameters = new NameValueCollection();
+                parameters.Add(new KeyValuePair<string, string>("hasLabels","Y"));
+                BreweryDbClient client = new BreweryDbClient("a956af587b434c4c89ef18c7bbd2fac9");
+                //var response = await client.Beers.GetAll(10);
+                var response = await client.Beers.Get(parameters);
+
+                Beers = response.Data;
+                mylist.ItemsSource = Beers;
+                
+                
+            }
+            catch (Exception e)
+            {
+
+            }
+            
+            
+            
+
+            
+
+
+            base.OnAppearing();
         }
 
         async void SearchCommandExecute()
@@ -38,9 +71,6 @@ namespace BeerOnTap
 
             BreweryDbClient client = new BreweryDbClient("a956af587b434c4c89ef18c7bbd2fac9");
             var response = await client.Beers.Search("duvel");
-            Beers = response.Data;
-            
-            
 
             //create a list view and bind beers to the list view
 

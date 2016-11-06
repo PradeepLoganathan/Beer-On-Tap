@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeerOnTap.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,13 @@ namespace BeerOnTap
         public App()
         {
             InitializeComponent();
-            
-            MainPage = new BeerOnTap.MainPage();
+
+            MainPage = new NavigationPage(new BeerSearchPage())
+            {
+                BarBackgroundColor = Color.Blue,
+                BarTextColor = Color.White
+
+            };
         }
 
         protected override void OnStart()
